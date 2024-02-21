@@ -4,8 +4,8 @@
 
 'use strict;'
 
-const kWhitelistedExtensionId = 'dpicdiinminmigempanoghnpckmkfepi';
-const kExtensionIds = [kWhitelistedExtensionId];
+const kAllowlistedExtensionId = 'dpicdiinminmigempanoghnpckmkfepi';
+const kExtensionIds = [kAllowlistedExtensionId];
 
 let portMap = {};
 let webview = null;
@@ -130,7 +130,7 @@ function connectToExtension(extensionId) {
 }
 
 function setUpExtensionHandlers() {
-  let port = portMap[kWhitelistedExtensionId];
+  let port = portMap[kAllowlistedExtensionId];
   // Some examples of UI in the app requesting services from the guest.
   // The replies from the extension are injected into the guest and executed
   // via the port.onMessage handler declared above.
